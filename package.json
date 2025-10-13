@@ -1,0 +1,28 @@
+{
+  "name": "linter",
+  "version": "1.0.0",
+  "description": "Standardized linting config.",
+  "keywords": [
+    "standardized",
+    "linting",
+    "config"
+  ],
+  "author": "Brian Kennish <oldestlivingboy@gmail.com>",
+  "license": "GPL-3.0",
+  "type": "module",
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.28.0",
+    "@babel/preset-react": "^7.27.1",
+    "@eslint/js": "^9.31.0",
+    "eslint-plugin-jsonc": "^2.20.1",
+    "eslint-plugin-prettier": "^5.5.3",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.3.0",
+    "jsonc-eslint-parser": "^2.4.0",
+    "prettier": "^3.6.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agentfirstdev/linter"
+  }
+}
