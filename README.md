@@ -13,8 +13,8 @@ To add the linter to a project, follow the steps below:
    $ git submodule add https://github.com/agentfirstdev/linter
    ```
 
-3. Extend your project’s `package.json` file with and a `scripts` dictionary, if necessary, and a
-   script item to run the linter:
+3. Extend your project’s `package.json` file with and a `scripts` object, if necessary, and a member
+   of the object for running the linter:
 
    ```json
    ...
@@ -38,11 +38,11 @@ To add the linter to a project, follow the steps below:
    $ npm run lint -- [filename]
    ```
 
-6. If prompted, agree to download the specified version of ESLint:
+6. If prompted on first run, agree to import the specified version of ESLint:
 
    ```console
      Need to install the following packages:
-     eslint@x.y.z
+     eslint@[version]
      Ok to proceed? (y)
    ```
 
