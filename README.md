@@ -1,49 +1,49 @@
 # Agent First linter
 
-The Agent First linter applies standardized linting configuration.
+The Agent First linter applies standardized linting to JavaScript, JSX, and JSON files.
 
 ## Usage
 
 To add the linter to a project, follow the steps below:
 
-1. Go to the directory where you want to add the linter.
-2. Download the code:
+1. Go to the project directory where you want to add the linter.
+2. Download the code to your directory:
 
    ```shell
    $ git submodule add https://github.com/agentfirstdev/linter
    ```
 
-3. Add a `scripts` property, if necessary, to your project’s `package.json` file and a command for
-   running the linter to the property:
+3. Extend your project’s `package.json` file with and a `scripts` dictionary, if necessary, and a
+   script item to run the linter:
 
    ```json
-   …
+   ...
    "scripts": {
-     …
+     ...
      "lint": "npx eslint --config linter/eslint.config.js"
    },
-   …
+   ...
    ```
 
-4. Switch to the linter directory then import the dependencies:
+4. Switch to the linter directory then import its dependencies:
 
    ```shell
    $ cd linter
    $ npm i
    ```
 
-5. Lint any file afterward:
+5. Lint any file thereafter:
 
    ```shell
-   $ npm run lint -- [Insert filename here]
+   $ npm run lint -- [filename]
    ```
 
-6. If prompted, agree to install the given version of ESLint:
+6. If prompted, agree to download the specified version of ESLint:
 
    ```console
      Need to install the following packages:
-     eslint@9.37.0
-     Ok to proceed? (y) 
+     eslint@x.y.z
+     Ok to proceed? (y)
    ```
 
 ## Clients
@@ -52,7 +52,7 @@ The linter was developed with these projects:
 
 * [Agent First website](https://github.com/agentfirstdev/www)
 * [Agent First documentation](https://github.com/agentfirstdev/doc)
-* [Agent First whitelabeling resources](https://github.com/agentfirstdev/whitelabel)
+* [Agent First whitelabel resources](https://github.com/agentfirstdev/whitelabel)
 
 ## License
 
