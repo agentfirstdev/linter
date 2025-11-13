@@ -6,5 +6,19 @@
   "objectWrap": "collapse",
   "proseWrap": "always",
   "plugins": ["prettier-plugin-sql"],
-  "overrides": [{ "files": "*.sql", "options": { "parser": "sql", "language": "postgresql" } }]
+  "overrides": [
+    {
+      "files": "*.sql",
+      "options": {
+        "parser": "sql",
+        "language": "postgresql",
+        "expressionWidth": 45,
+        "logicalOperatorNewline": "after",
+        "keywordCase": "lower",
+        "dataTypeCase": "lower",
+        "functionCase": "lower",
+        "identifierCase": "lower"
+      }
+    }
+  ]
 }
