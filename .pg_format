@@ -1,4 +1,5 @@
-wrap-limit=100
+wrap-limit=80
+keep-newline=1
 no-extra-line=1
 spaces=2
 no-space-function=1
