@@ -12,16 +12,18 @@ To add the linter to a project, follow the steps below:
 
    ```shell
    $ git submodule add https://github.com/agentfirstdev/linter
+   $ git submodule update --init --recursive
    ```
 
-3. Extend your project’s `package.json` file with and a `scripts` object, if necessary, and a member
+3. Extend your project’s `package.json` file with and a `scripts` object, if necessary, and members
    of the object for running the linter:
 
    ```jsonc
    // ...
    "scripts": {
      // ...
-     "lint": "npx eslint --config linter/eslint.config.js"
+     "lint": "npx eslint -c linter/eslint.config.js",
+     "lint-sql": "bash -c 'diff -u \"$1\" <(./linter/3p/pgFormatter/pg_format -c linter/.pg_format \"$1\")' --"
    },
    // ...
    ```
@@ -33,10 +35,16 @@ To add the linter to a project, follow the steps below:
    $ npm i
    ```
 
-5. Lint any file thereafter:
+5. Lint any JS, JSX, or JSON file thereafter:
 
    ```shell
    $ npm run lint -- [filename]
+   ```
+
+   Alternatively, lint any SQL file:
+
+   ```shell
+   $ npm run lint-sql -- [filename]
    ```
 
 6. If prompted on first run, agree to import the specified version of ESLint:
