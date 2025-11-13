@@ -4,5 +4,7 @@
   "jsxSingleQuote": true,
   "trailingComma": "none",
   "objectWrap": "collapse",
-  "proseWrap": "always"
+  "proseWrap": "always",
+  "plugins": ["prettier-plugin-sql"],
+  "overrides": [{ "files": "*.sql", "options": { "parser": "sql", "language": "postgresql" } }]
 }

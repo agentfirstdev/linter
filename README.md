@@ -1,6 +1,7 @@
 # Agent First linter
 
-The Agent First linter applies standardized linting to JavaScript, JSX, and JSON files.
+The Agent First linter applies standardized linting to JavaScript, JSX, JSON, and (PL/pgSQL) SQL
+files.
 
 ## Usage
 
