@@ -35,24 +35,25 @@ To add the linter to a project, follow the steps below:
    $ npm i
    ```
 
-5. Lint any JS, JSX, or JSON file thereafter:
+5. Lint any JS, JSX, or JSON file in your project thereafter:
 
    ```shell
+   $ cd ..
    $ npm run lint -- [filename]
+   ```
+
+   If prompted on first run, agree to import the specified version of ESLint:
+
+   ```console
+     Need to install the following packages:
+     eslint@[version]
+     Ok to proceed? (y)
    ```
 
    Alternatively, lint any SQL file:
 
    ```shell
    $ npm run lint-sql -- [filename]
-   ```
-
-6. If prompted on first run, agree to import the specified version of ESLint:
-
-   ```console
-     Need to install the following packages:
-     eslint@[version]
-     Ok to proceed? (y)
    ```
 
 ## Clients
