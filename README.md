@@ -2,7 +2,7 @@
 
 _The missing services for agent-first development_
 
-## Code linter
+## House linter
 
 The **Agent First** linter applies standardized linting to JavaScript, JSX, JSON, and (PL/pgSQL) SQL
 files.
