@@ -1,6 +1,10 @@
-# Agent First linter
+# ![Agent First](assets/social/logotype-optimized.png) [![X post](assets/social/x-post-optimized.png)](https://x.com/intent/post?text=Enhance%20your%20AI%20agent%20with%20research%20and%20browsing%20abilities%3A&url=https%3A%2F%2Fagentfirst.dev%2F%3Fref%3Dgithub&via=agentfirstdev)
 
-The Agent First linter applies standardized linting to JavaScript, JSX, JSON, and (PL/pgSQL) SQL
+_The missing services for agent-first development_
+
+## Code linter
+
+The **Agent First** linter applies standardized linting to JavaScript, JSX, JSON, and (PL/pgSQL) SQL
 files.
 
 ## Usage
@@ -79,5 +83,5 @@ even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE
 
 ## Exceptions
 
-The Agent First logos, trademarks, domain names, and other brand features used in this program
+The **Agent First** logos, trademarks, domain names, and other brand features used in this program
 cannot be reused without permission and no license is granted thereto.
