@@ -26,7 +26,8 @@ To add the linter to a project, follow the steps below:
    // ...
    "scripts": {
      // ...
-     "lint": "npx eslint -c linter/eslint.config.js",
+     "lint": "npx --prefix linter eslint -c linter/eslint.config.js",
+     "lint-css": "npx --prefix linter stylelint --config linter/.stylelintrc.json",
      "lint-sql": "bash -c 'diff -u \"$1\" <(./linter/3p/pgFormatter/pg_format -c linter/.pg_format \"$1\")' --"
    },
    // ...
@@ -43,21 +44,19 @@ To add the linter to a project, follow the steps below:
 
    ```shell
    $ cd ..
-   $ npm run lint -- [filename]
+   $ npm run lint [filename]
    ```
 
-   If prompted on first run, agree to import the specified version of ESLint:
+   Lint any CSS file:
 
-   ```console
-     Need to install the following packages:
-     eslint@[version]
-     Ok to proceed? (y)
+   ```shell
+   $ npm run lint-css [filename]
    ```
 
    Alternatively, lint any SQL file:
 
    ```shell
-   $ npm run lint-sql -- [filename]
+   $ npm run lint-sql [filename]
    ```
 
 ## Clients
