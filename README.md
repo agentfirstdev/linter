@@ -15,8 +15,8 @@ To add the linter to a project, follow the steps below:
 2. Download the code to your directory:
 
    ```shell
-   $ git submodule add https://github.com/agentfirstdev/linter
-   $ git submodule update --init --recursive
+   git submodule add https://github.com/agentfirstdev/linter
+   git submodule update --init --recursive
    ```
 
 3. Extend your project’s `package.json` file with and a `scripts` object, if necessary, and members
@@ -36,27 +36,27 @@ To add the linter to a project, follow the steps below:
 4. Switch to the linter directory then import its dependencies:
 
    ```shell
-   $ cd linter
-   $ npm i
+   cd linter
+   npm i
    ```
 
 5. Lint any JS, JSX, or JSON file in your project thereafter:
 
    ```shell
-   $ cd ..
-   $ npm run lint [filename]
+   cd ..
+   npm run lint [filename]
    ```
 
    Lint any CSS file:
 
    ```shell
-   $ npm run lint-css [filename]
+   npm run lint-css [filename]
    ```
 
    Alternatively, lint any SQL file:
 
    ```shell
-   $ npm run lint-sql [filename]
+   npm run lint-sql [filename]
    ```
 
 ## Clients
