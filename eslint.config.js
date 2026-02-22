@@ -11,6 +11,10 @@ const prettierConfig = JSON.parse(
   filesystem.readFileSync(new URL('.prettierrc', import.meta.url), 'utf8')
 );
 
+prettierConfig.plugins = prettierConfig.plugins.map((plugin) => {
+  return new URL(plugin, import.meta.url).pathname;
+});
+
 export default defineConfig([
   {
     files: ['**/*.{js,mjs,cjs,jsx}'],
