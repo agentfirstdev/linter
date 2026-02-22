@@ -4,7 +4,7 @@ _The missing services for agent-first development_
 
 ## House linter
 
-The **Agent First** linter applies standardized linting to JavaScript, JSX, JSON, and (PL/pgSQL) SQL
+The **Agent First** linter applies standardized linting to JavaScript, JSX, JSON, CSS, and SQL
 files.
 
 ## Usage
@@ -28,7 +28,7 @@ To add the linter to a project, follow the steps below:
      // ...
      "lint": "npx --prefix linter eslint -c linter/eslint.config.js",
      "lint-css": "npx --prefix linter stylelint --config linter/.stylelintrc.json",
-     "lint-sql": "bash -c 'diff -u \"$1\" <(./linter/3p/pgFormatter/pg_format -c linter/.pg_format \"$1\")' --"
+     "lint-sql": "npx --prefix linter prettier --config linter/.prettierrc --check"
    },
    // ...
    ```

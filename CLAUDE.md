@@ -5,8 +5,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Project Overview
 
 This is the **Agent First** shared linting configuration, distributed as a Git submodule to other
-Agent First projects. It provides standardized rules for JavaScript, JSX, JSON, CSS, and PL/pgSQL
-files.
+Agent First projects. It provides standardized rules for JavaScript, JSX, JSON, CSS, and SQL files.
 
 There is no build step, no test suite, and no `scripts` in `package.json`. This repo is consumed
 entirely by parent projects that reference its config files.
@@ -29,8 +28,8 @@ npx --prefix linter eslint -c linter/eslint.config.js [file]
 # CSS
 npx --prefix linter stylelint --config linter/.stylelintrc.json [file]
 
-# SQL (diff-based; exits non-zero if formatting differs)
-diff -u "$1" <(./linter/3p/pgFormatter/pg_format -c linter/.pg_format "$1")
+# SQL
+npx --prefix linter prettier --config linter/.prettierrc --check [file]
 ```
 
 ## Architecture
@@ -38,9 +37,8 @@ diff -u "$1" <(./linter/3p/pgFormatter/pg_format -c linter/.pg_format "$1")
 ```
 eslint.config.js          Main ESLint flat config (ESLint 10, defineConfig)
   reads .prettierrc        Prettier formatting rules (100-char lines, single quotes, no trailing commas)
+.prettierrc                Also configures SQL formatting via prettier-plugin-sql
 .stylelintrc.json          CSS linting (stylelint-config-standard, relaxed naming patterns)
-.pg_format                 pgFormatter config (2-space indent, 80-char wrap, preserve casing)
-3p/pgFormatter/pg_format   Third-party Perl executable (Git submodule)
 ```
 
 `eslint.config.js` defines three config blocks:
