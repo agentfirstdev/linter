@@ -5,16 +5,6 @@
   "trailingComma": "none",
   "objectWrap": "collapse",
   "proseWrap": "always",
-  "plugins": ["prettier-plugin-sql"],
-  "overrides": [
-    {
-      "files": "*.sql",
-      "options": {
-        "language": "postgresql",
-        "keywordCase": "upper",
-        "dataTypeCase": "upper",
-        "functionCase": "upper"
-      }
-    }
-  ]
+  "plugins": ["./node_modules/prettier-plugin-sql/lib/index.cjs"],
+  "overrides": [{ "files": "*.sql", "options": { "language": "postgresql" } }]
 }
